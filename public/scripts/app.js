@@ -6,7 +6,8 @@ $(function(){
   }
   resize();
   $(window).resize(_.debounce(resize,300));
-  $("#text").keyup(_.debounce(function(event) {
+
+  function render() {
     $.ajax({
       type: "POST",
       url: "/render",
@@ -18,5 +19,7 @@ $(function(){
         $('#preview').empty().append(data);
       }
     });
-  },300));
+  }
+  $("#format").change(render);
+  $("#text").keyup(_.debounce(render,300));
 });
