@@ -1,0 +1,16 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    github-markup (0.5.3)
+    rack (1.3.2)
+    sinatra (1.2.6)
+      rack (~> 1.1)
+      tilt (>= 1.2.2, < 2.0)
+    tilt (1.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  github-markup
+  sinatra
