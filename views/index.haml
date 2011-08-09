@@ -6,14 +6,17 @@
     %script{:type => "text/javascript", :src => "/scripts/app.js"}
     %link{:href => "/stylesheets/github.css", :rel => "stylesheet", :type => "text/css" }
   %body
-    %h1 Github Preview
-    %select{:id => "format", :name => "format"}
-      %option markdown
-      %option textile
-      %option rdoc
-      %option org
-      %option creole
-      %option mediawiki
+    %div{:id => "header"}
+      %h1 Github Preview
+      %p
+        Format: 
+        %select{:id => "format", :name => "format"}
+          %option markdown
+          %option textile
+          %option rdoc
+          %option org
+          %option creole
+          %option mediawiki
     %table{:cellspacing => "0", :cellpadding => "0", :style => "margin: 0; padding: 6px 6px 0; width: 100%;"}
       %tr
         %td{:style => "vertical-align: top; width: 50%;"}
