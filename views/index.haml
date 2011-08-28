@@ -7,7 +7,7 @@
     %script{:type => "text/javascript", :src => "/scripts/app.js"}
     %link{:href => "/stylesheets/github.css", :rel => "stylesheet", :type => "text/css" }
   %body
-    %div{:id => "header"}
+    #header
       %h1 Github Preview
       %p
         Format: 
@@ -24,4 +24,4 @@
         %td{:style => "vertical-align: top; width: 50%;"}
           %textarea{:id => "text", :style => "width: 100%; height: 300px;"}
         %td{:id => "readme", :class => "announce", :style => "vertical-align: top; width: 50%; height: 300px"}
-          %div{:id => "preview", :class => "wikistyle", :style => "margin: 1px 0 0 10px; padding: 0 0 0 10px; overflow: auto;"}
+          #preview.wikistyle{:style => "margin: 1px 0 0 10px; padding: 0 0 0 10px; overflow: auto;"}
