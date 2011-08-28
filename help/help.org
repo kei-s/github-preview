@@ -1,0 +1,65 @@
+* Org
+
+[[http://orgmode.org/manual/index.html][Official Syntax]]
+
+* Heading 1
+
+#+BEGIN_EXAMPLE
+* Heading 1
+#+END_EXAMPLE
+
+** Heading 2
+
+#+BEGIN_EXAMPLE
+** Heading 2
+#+END_EXAMPLE
+
+* List
+
+- hi
+ - ho
+
+#+BEGIN_EXAMPLE
+- hi
+ - ho
+#+END_EXAMPLE
+
+
+* Code
+
+self.codeblock? #=> false
+
+#+BEGIN_EXAMPLE
+self.codeblock? #=> true
+puts "OK"
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+self.codeblock? #=> false
+
+__ Please remove space in # and + __
+# +BEGIN_EXAMPLE
+self.codeblock? #=> true
+puts "OK"
+# +END_EXAMPLE
+#+END_EXAMPLE
+
+Use =code= in line.
+
+#+BEGIN_EXAMPLE
+Use =code= in line.
+#+END_EXAMPLE
+
+* Link
+
+http://github-preview.herokuapp.com/ will be autolinked in Github.
+
+#+BEGIN_EXAMPLE
+http://github-preview.herokuapp.com/ will be autolinked in Github.
+#+END_EXAMPLE
+
+[[http://github-preview.herokuapp.com/][Github Preview]]
+
+#+BEGIN_EXAMPLE
+[[http://github-preview.herokuapp.com/][Github Preview]]
+#+END_EXAMPLE

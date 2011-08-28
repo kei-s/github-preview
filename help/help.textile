@@ -1,0 +1,48 @@
+h1. Textile
+
+"Official Syntax":http://www.textism.com/tools/textile/
+"RedCloth Help":http://redcloth.org/textile
+
+h1. Heading1
+
+bc. h1. Heading 1
+
+h2. Heading 2
+
+bc. h2. Heading 2
+
+
+h1. List
+
+* hi
+** ho
+
+bc. * hi
+** ho
+
+h1. Code
+
+self.codeblock? #=> false
+
+bc. self.codeblock? #=> true
+puts "OK"
+
+
+bc. self.codeblock? #=> false
+__ insert line break __
+bc. self.codeblock? #=> true
+puts "OK"
+
+Use @code@ in line.
+
+bc. Use @code@ in line.
+
+h1. Link
+
+http://github-preview.herokuapp.com/ will be autolinked in Github.
+
+bc. http://github-preview.herokuapp.com/ will be autolinked in Github.
+
+"Github Preview":http://github-preview.herokuapp.com/
+
+bc. "Github Preview":http://github-preview.herokuapp.com/

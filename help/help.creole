@@ -1,0 +1,57 @@
+= Creole
+
+[[http://wikicreole.org/|Official Syntax]]
+
+= Heading 1
+
+{{{
+= Heading 1
+}}}
+
+== Heading 2
+
+{{{
+== Heading 2
+}}}
+
+= List
+
+* hi
+** ho
+
+{{{
+* hi
+** ho
+}}}
+
+= Code
+
+self.codeblock? #=> false
+
+{{{
+self.codeblock? #=> true
+puts "OK"
+}}}
+
+{{{
+self.codeblock? #=> false
+
+{{{
+self.codeblock? #=> true
+puts "OK"
+ }}}
+}}}
+
+In Creole, Can't I use code in line? Anyone, teach me...
+
+= Link
+http://github-preview.herokuapp.com/ is autolinked.
+{{{
+http://github-preview.herokuapp.com/ is autolinked.
+}}}
+
+
+[[http://github-preview.herokuapp.com/|Github Preview]]
+{{{
+[[http://github-preview.herokuapp.com/|Github Preview]]
+}}}
