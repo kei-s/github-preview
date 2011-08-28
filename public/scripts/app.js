@@ -21,5 +21,5 @@ $(function(){
     });
   }
   $("#format").change(render);
-  $("#text").keyup(_.debounce(render,300));
+  $("#text").bind('input',_.debounce(render,300));
 });
