@@ -9,3 +9,8 @@ gem 'rdoc', '3.6.1'
 gem 'org-ruby'
 gem 'creole'
 gem 'wikicloth'
+
+group :test do
+  gem 'rspec'
+  gem 'capybara'
+end

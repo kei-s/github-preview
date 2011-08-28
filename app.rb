@@ -1,3 +1,4 @@
+require 'bundler/setup'
 require 'sinatra/base'
 require 'haml'
 require 'github/markup'
