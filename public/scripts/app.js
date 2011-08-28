@@ -40,21 +40,38 @@ $(function(){
   $("#format").change(render);
   $("#text").bind('input',_.debounce(render,300));
 
-  $('#showhelp').click(function() {
-    if ($('#showhelp').hasClass('on')) {
-      $('#showhelp').removeClass('on').text('Show Formating Help');
-      $('.panel').toggle();
+  var helpCaches = {};
+  function showHelp() {
+    var renderHelp = function(data) {
+      $('#showhelp').addClass('on').text('Show Preview');
+      $('#help').empty().append(data).show();
+      $('#preview').hide();
+    }
+    if (helpCaches[$('#format').val()]) {
+      renderHelp(helpCaches[$('#format').val()]);
     }
     else {
       $.ajax({
         type: "GET",
         url: "/help/"+$('#format').val(),
         success: function(data) {
-          $('#help').empty().append(data);
-          $('#showhelp').addClass('on').text('Show Preview');
-          $('.panel').toggle();
+          helpCaches[$('#format').val()] = data;
+          renderHelp(data);
         }
       });
+    }
+  }
+  function hideHelp() {
+    $('#showhelp').removeClass('on').text('Show Formating Help');
+    $('#help').hide();
+    $('#preview').show();
+  }
+  $('#showhelp').click(function() {
+    if ($('#showhelp').hasClass('on')) {
+      hideHelp();
+    }
+    else {
+      showHelp();
     }
   });
 });
