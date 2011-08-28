@@ -2,7 +2,7 @@ $(function(){
   function resize() {
     var height = $(window).height() - $("#header").outerHeight() - 20;
     $("#text").height(height);
-    $("#preview").height(height);
+    $(".panel").height(height);
   }
   resize();
   $(window).resize(_.debounce(resize,300));
@@ -39,4 +39,22 @@ $(function(){
   }
   $("#format").change(render);
   $("#text").bind('input',_.debounce(render,300));
+
+  $('#showhelp').click(function() {
+    if ($('#showhelp').hasClass('on')) {
+      $('#showhelp').removeClass('on').text('Show Formating Help');
+      $('.panel').toggle();
+    }
+    else {
+      $.ajax({
+        type: "GET",
+        url: "/help/"+$('#format').val(),
+        success: function(data) {
+          $('#help').empty().append(data);
+          $('#showhelp').addClass('on').text('Show Preview');
+          $('.panel').toggle();
+        }
+      });
+    }
+  });
 });
