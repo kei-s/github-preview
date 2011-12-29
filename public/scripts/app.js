@@ -1,4 +1,5 @@
 $(function(){
+  // keep text and preview at 100% height
   function resize() {
     var height = $(window).height() - $("#header").outerHeight() - 20;
     $("#text").height(height);
@@ -7,6 +8,8 @@ $(function(){
   resize();
   $(window).resize(_.debounce(resize,300));
 
+
+  // sync scrolling of textarea and preview
   function syncScroll() {
     var textarea = {
       size: $('#text')[0].scrollHeight,
@@ -23,6 +26,8 @@ $(function(){
   }
   $('#text').scroll(syncScroll);
 
+
+  // render markup into preview
   function render() {
     $.ajax({
       type: "POST",
@@ -37,9 +42,13 @@ $(function(){
       }
     });
   }
+  render();
+
   $("#format").change(render);
   $("#text").bind('input',_.debounce(render,300));
 
+
+  // show / hide help
   var helpCaches = {};
   function showHelp() {
     var renderHelp = function(data) {
@@ -61,11 +70,13 @@ $(function(){
       });
     }
   }
+
   function hideHelp() {
     $('#showhelp').removeClass('on').text('Show Formating Help');
     $('#help').hide();
     $('#preview').show();
   }
+
   $('#showhelp').click(function() {
     if ($('#showhelp').hasClass('on')) {
       hideHelp();
