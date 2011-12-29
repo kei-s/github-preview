@@ -11,14 +11,11 @@
       %h1 Github Preview
       %p
         Format:
+        - formats = %w[markdown textile rdoc org creole mediawiki]
         %select#format{:name => "format"}
-          %option markdown
-          %option textile
-          %option rdoc
-          %option org
-          %option creole
-          %option mediawiki
-        %a#showhelp{:href => "#"} Show Formating Help
+          - formats.each do |format|
+            %option{:selected => ('selected' if format == params[:format])}= format
+        %a#showhelp{:href => "#"} Show Formatting Help
         |
         %a{:href => "https://github.com/kei-s/github-preview"} Source on Github
     %table{:cellspacing => "0", :cellpadding => "0", :style => "margin: 0; padding: 6px 6px 0; width: 100%;"}

@@ -14,15 +14,18 @@ describe Preview, :js => true do
   end
 
   context "with submitted text" do
-    before do
-      visit('/?text=%23XXX')
-    end
-
     it "shows submitted text" do
+      visit('/?text=%23XXX')
       find('#text').text.should == "#XXX"
     end
 
     it "parses submitted text" do
+      visit('/?text=%23XXX')
+      find('#preview h1').text.should == "XXX"
+    end
+
+    it "parses submitted text in submitted format" do
+      visit('/?text=h1.%20XXX&format=textile')
       find('#preview h1').text.should == "XXX"
     end
   end
