@@ -16,7 +16,7 @@ Then `github-preview someproject/Readme.markdown`
     content = File.read(ARGV[0])
     url = 'http://github-preview.herokuapp.com/'
 
-    exec "open '#{url}/?text=#{CGI.escape content}'"
+    exec "open '#{url}/?text=#{CGI.escape content}&format=markdown'"
 
 ## Local development
 
