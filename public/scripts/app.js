@@ -37,6 +37,8 @@ $(function(){
       }
     });
   }
+  render();
+
   $("#format").change(render);
   $("#text").bind('input',_.debounce(render,300));
 
