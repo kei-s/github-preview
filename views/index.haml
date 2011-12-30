@@ -7,6 +7,9 @@
     %script{:type => "text/javascript", :src => "/scripts/app.js"}
     %link{:href => "/stylesheets/github.css", :rel => "stylesheet", :type => "text/css" }
   %body
+    %a{:href => "https://github.com/kei-s/github-preview"}
+      %img{:alt => "Fork me on GitHub", :src => "http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png", :style => "position: absolute; top: 0pt; right: 0pt; border: 0pt none;"}
+
     #header
       %h1 Github Preview
       %p
@@ -16,8 +19,7 @@
           - formats.each do |format|
             %option{:selected => ('selected' if format == params[:format])}= format
         %a#showhelp{:href => "#"} Show Formatting Help
-        |
-        %a{:href => "https://github.com/kei-s/github-preview"} Source on Github
+
     %table{:cellspacing => "0", :cellpadding => "0", :style => "margin: 0; padding: 6px 6px 0; width: 100%;"}
       %tr
         %td{:style => "vertical-align: top; width: 50%;"}
