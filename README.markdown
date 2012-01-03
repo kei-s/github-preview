@@ -22,5 +22,5 @@ Then `github-preview someproject/Readme.markdown`
 
     bundle
     bundle exec rspec spec
-    bundle exec rackup
-    open http://localhost:9292
+    bundle exec thin start
+    open http://localhost:3000
