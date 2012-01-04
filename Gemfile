@@ -10,6 +10,7 @@ gem 'org-ruby', '~>0.5.0' # 0.6.0 is broken on 1.9
 gem 'creole'
 gem 'wikicloth'
 gem 'thin' # better performance on heroku + long urls possible
+gem 'heroku'
 
 group :test do
   gem 'rspec'
