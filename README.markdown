@@ -1,4 +1,4 @@
-# Github Preview
+# Github Preview [![TravisCI](https://secure.travis-ci.org/kei-s/github-preview.png?branch=master)](http://travis-ci.org/kei-s/github-preview)
 
 ## App on Heroku
 [http://github-preview.herokuapp.com/](http://github-preview.herokuapp.com/)
