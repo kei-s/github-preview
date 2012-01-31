@@ -13,6 +13,7 @@ gem 'thin' # better performance on heroku + long urls possible
 gem 'heroku'
 
 group :test do
+  gem 'rake'
   gem 'rspec'
   gem 'capybara'
 end
