@@ -19,6 +19,18 @@
           - formats.each do |format|
             %option{:selected => ('selected' if format == params[:format])}= format
         %a#showhelp{:href => "#"} Show Formatting Help
+        :javascript
+          function getText() {
+            return $('#text').val();
+          }
+        %object#clippy{classid: "clsid:d27cdb6e-ae6d-11cf-96b8-444553540000", width: "110", height: "14"}
+          %param{name: "movie", value: "/flash/clippy.swf"}
+          %param{name: "allowScriptAccess", value: "always"}
+          %param{name: "quality", value: "high"}
+          %param{name: "scale", value: "noscale"}
+          %param{NAME: "FlashVars", value: "call=getText"}
+          %param{name: "bgcolor", value: "#FFF"}
+          %embed{src: "/flash/clippy.swf", width: "110", height: "14", name: "clippy", quality: "high", allowScriptAccess: "always", type: "application/x-shockwave-flash", pluginspage: "http://www.macromedia.com/go/getflashplayer", FlashVars: "call=getText", bgcolor: "#FFF" }
 
     %table{:cellspacing => "0", :cellpadding => "0", :style => "margin: 0; padding: 6px 6px 0; width: 100%;"}
       %tr

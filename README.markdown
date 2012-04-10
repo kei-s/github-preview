@@ -24,3 +24,6 @@ Then `github-preview someproject/Readme.markdown`
     bundle exec rspec spec
     bundle exec thin start
     open http://localhost:3000
+
+## Copy to Clipboard
+Using [ussy/clippy](https://github.com/ussy/clippy). Thanks a lot!
