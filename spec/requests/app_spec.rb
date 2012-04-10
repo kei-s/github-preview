@@ -29,4 +29,12 @@ describe Preview, :js => true do
       find('#preview h1').text.should == "XXX"
     end
   end
+
+  context "escape" do
+    it "should not show unexpected tag" do
+      visit('/?text=</textarea></td><h1>hogehoge</h1>')
+      page.should_not have_selector(:xpath, '//body/h1[text()="hogehoge"]')
+      find('#preview h1').text.should == "hogehoge"
+    end
+  end
 end
