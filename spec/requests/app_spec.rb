@@ -53,27 +53,27 @@ describe Preview, :js => true do
     end
 
     context "markdown" do
-      it_behaves_like 'be well formated', "markdown",  "- hi"
+      it_behaves_like 'be well formated', 'markdown',  '- hi'
     end
 
     context "textile" do
-      it_behaves_like 'be well formated', "textile",   "* hi"
+      it_behaves_like 'be well formated', 'textile',   '* hi'
     end
 
     context "rdoc" do
-      it_behaves_like 'be well formated', "rdoc",      "- hi"
+      it_behaves_like 'be well formated', 'rdoc',      '- hi'
     end
 
     context "org" do
-      it_behaves_like 'be well formated', "org",       "- hi"
+      it_behaves_like 'be well formated', 'org',       '- hi'
     end
 
     context "creole" do
-      it_behaves_like 'be well formated', "creole",    "* hi"
+      it_behaves_like 'be well formated', 'creole',    '* hi'
     end
 
     context "mediawiki" do
-      it_behaves_like 'be well formated', "mediawiki", "* hi"
+      it_behaves_like 'be well formated', 'mediawiki', '* hi'
     end
   end
 
@@ -111,7 +111,7 @@ describe Preview, :js => true do
   end
 
   def click_clippy
-    page.execute_script("window.getText();")
+    page.execute_script('window.getText();')
   end
 
 end
