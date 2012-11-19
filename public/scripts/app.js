@@ -93,7 +93,6 @@ $(function(){
     GithubPreview.changedForm = false;
     $(window).bind('beforeunload', function(e) {
       if (GithubPreview.changedForm) {
-        console.log(e.clipboardData);
         return 'You have uncopied changes.';
       }
     });
