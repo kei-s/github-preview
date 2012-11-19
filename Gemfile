@@ -6,7 +6,7 @@ gem 'github-markup'
 gem 'redcarpet'
 gem 'RedCloth'
 gem 'rdoc', '3.6.1'
-gem 'org-ruby', '~>0.5.0' # 0.6.0 is broken on 1.9
+gem 'org-ruby'
 gem 'creole'
 gem 'wikicloth'
 gem 'thin' # better performance on heroku + long urls possible
