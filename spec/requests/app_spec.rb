@@ -37,4 +37,39 @@ describe Preview, :js => true do
       find('#preview h1').text.should == "hogehoge"
     end
   end
+
+  describe "formats" do
+    shared_examples_for 'be well formated' do |format, text|
+      it "should render specified format" do
+        visit('/')
+        select(format, :from => 'format')
+        fill_in('text', :with => text)
+        find('#preview ul li').text.should == "hi"
+      end
+    end
+
+    context "markdown" do
+      it_behaves_like 'be well formated', "markdown",  "- hi"
+    end
+
+    context "textile" do
+      it_behaves_like 'be well formated', "textile",   "* hi"
+    end
+
+    context "rdoc" do
+      it_behaves_like 'be well formated', "rdoc",      "- hi"
+    end
+
+    context "org" do
+      it_behaves_like 'be well formated', "org",       "- hi"
+    end
+
+    context "creole" do
+      it_behaves_like 'be well formated', "creole",    "* hi"
+    end
+
+    context "mediawiki" do
+      it_behaves_like 'be well formated', "mediawiki", "* hi"
+    end
+  end
 end
