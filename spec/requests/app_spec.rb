@@ -87,18 +87,23 @@ describe Preview, :js => true do
       leave
       page.driver.browser.switch_to.alert.text.should_not be_nil
       accept_confirmation
+      correct_leaving_destination?
     end
 
     it "should not show when leaving just after copy text with clippy" do
       click_clippy
       leave
-      page.should have_selector("img[src$='__sinatra__/404.png']")
+      correct_leaving_destination?
     end
   end
 
   private
   def leave
-    visit('/other_page') #=> be 404
+    visit('/help/markdown') # use as destination for other page
+  end
+
+  def correct_leaving_destination?
+    page.should have_selector("h1", "Markdown")
   end
 
   def accept_confirmation
