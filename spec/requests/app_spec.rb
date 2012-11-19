@@ -11,6 +11,8 @@ describe Preview, :js => true do
     visit('/')
     fill_in('text', :with => '- hi')
     find('#preview ul li').text.should == "hi"
+    leave
+    accept_confirmation
   end
 
   context "with submitted text" do
@@ -72,4 +74,37 @@ describe Preview, :js => true do
       it_behaves_like 'be well formated', "mediawiki", "* hi"
     end
   end
+
+  context "confirmation after editing" do
+    before do
+      visit('/')
+      fill_in('text', :with => '- hi')
+    end
+
+    it "should show when leaving" do
+      leave
+      page.driver.browser.switch_to.alert.text.should_not be_nil
+      accept_confirmation
+    end
+
+    it "should not show when leaving just after copy text with clippy" do
+      click_clippy
+      leave
+      page.should have_selector("img[src$='__sinatra__/404.png']")
+    end
+  end
+
+  private
+  def leave
+    visit('/other_page') #=> be 404
+  end
+
+  def accept_confirmation
+    page.driver.browser.switch_to.alert.accept
+  end
+
+  def click_clippy
+    page.execute_script("window.getText();")
+  end
+
 end
