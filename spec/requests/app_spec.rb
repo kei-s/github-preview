@@ -47,6 +47,8 @@ describe Preview, :js => true do
         select(format, :from => 'format')
         fill_in('text', :with => text)
         find('#preview ul li').text.should == "hi"
+        leave
+        accept_confirmation
       end
     end
 
