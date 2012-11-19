@@ -3,8 +3,8 @@ require_relative '../spec_helper.rb'
 describe Preview, :js => true do
   it "shows all elements" do
     visit('/')
-    page.should have_content(:text)
-    page.should have_content(:preview)
+    page.should have_selector('#text')
+    page.should have_selector('#preview')
   end
 
   it "shows markdown preview" do
