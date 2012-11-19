@@ -1,4 +1,6 @@
 $(function(){
+  if (typeof GithubPreview === 'undefined') GithubPreview = {};
+
   // keep text and preview at 100% height
   function resize() {
     var height = $(window).height() - $("#header").outerHeight() - 20;
@@ -85,4 +87,23 @@ $(function(){
       showHelp();
     }
   });
+
+  // confirmation
+  function setupConfirmation() {
+    GithubPreview.changedForm = false;
+    $(window).bind('beforeunload', function(e) {
+      if (GithubPreview.changedForm) {
+        console.log(e.clipboardData);
+        return 'You have uncopied changes.';
+      }
+    });
+
+    $('#text').bind('input', function() {
+      GithubPreview.changedForm = true;
+    }).bind('copy cut', function() {
+      GithubPreview.changedForm = false;
+    });
+  }
+  setupConfirmation();
+
 });
