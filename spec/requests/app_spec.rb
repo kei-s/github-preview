@@ -103,7 +103,7 @@ describe Preview, :js => true do
   end
 
   def correct_leaving_destination?
-    page.should have_selector("h1", "Markdown")
+    page.should have_selector('h1')
   end
 
   def accept_confirmation
