@@ -1,7 +1,7 @@
 # Markdown
 [Official Syntax](http://daringfireball.net/projects/markdown/syntax)
 
-[Github Flavored Markdown](http://github.github.com/github-flavored-markdown/preview.html)
+[Github Flavored Markdown](http://github.github.com/github-flavored-markdown/)
 
 # Heading 1
     # Heading 1
