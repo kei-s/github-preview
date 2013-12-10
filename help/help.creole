@@ -51,7 +51,7 @@ http://github-preview.herokuapp.com/ is autolinked.
 }}}
 
 
-[[http://github-preview.herokuapp.com/|Github Preview]]
+[[http://github-preview.herokuapp.com/|GitHub Preview]]
 {{{
-[[http://github-preview.herokuapp.com/|Github Preview]]
+[[http://github-preview.herokuapp.com/|GitHub Preview]]
 }}}

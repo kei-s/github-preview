@@ -52,14 +52,14 @@ Use =code= in line.
 
 * Link
 
-http://github-preview.herokuapp.com/ will be autolinked in Github.
+http://github-preview.herokuapp.com/ will be autolinked in GitHub.
 
 #+BEGIN_EXAMPLE
-http://github-preview.herokuapp.com/ will be autolinked in Github.
+http://github-preview.herokuapp.com/ will be autolinked in GitHub.
 #+END_EXAMPLE
 
-[[http://github-preview.herokuapp.com/][Github Preview]]
+[[http://github-preview.herokuapp.com/][GitHub Preview]]
 
 #+BEGIN_EXAMPLE
-[[http://github-preview.herokuapp.com/][Github Preview]]
+[[http://github-preview.herokuapp.com/][GitHub Preview]]
 #+END_EXAMPLE
