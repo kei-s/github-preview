@@ -1,5 +1,5 @@
 $(function(){
-  if (typeof GithubPreview === 'undefined') GithubPreview = {};
+  if (typeof GitHubPreview === 'undefined') GitHubPreview = {};
 
   // keep text and preview at 100% height
   function resize() {
@@ -90,17 +90,17 @@ $(function(){
 
   // confirmation
   function setupConfirmation() {
-    GithubPreview.changedForm = false;
+    GitHubPreview.changedForm = false;
     $(window).bind('beforeunload', function(e) {
-      if (GithubPreview.changedForm) {
+      if (GitHubPreview.changedForm) {
         return 'You have uncopied changes.';
       }
     });
 
     $('#text').bind('input', function() {
-      GithubPreview.changedForm = true;
+      GitHubPreview.changedForm = true;
     }).bind('copy cut', function() {
-      GithubPreview.changedForm = false;
+      GitHubPreview.changedForm = false;
     });
   }
   setupConfirmation();

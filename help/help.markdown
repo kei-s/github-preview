@@ -1,7 +1,7 @@
 # Markdown
 [Official Syntax](http://daringfireball.net/projects/markdown/syntax)
 
-[Github Flavored Markdown](http://github.github.com/github-flavored-markdown/)
+[GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/)
 
 # Heading 1
     # Heading 1
@@ -34,11 +34,11 @@ Use `code` in line.
     Use `code` in line.
 
 # Link
-http://github-preview.herokuapp.com/ will be autolinked in Github.
+http://github-preview.herokuapp.com/ will be autolinked in GitHub.
 
-     http://github-preview.herokuapp.com/ will be autolinked in Github.
+     http://github-preview.herokuapp.com/ will be autolinked in GitHub.
 
-[Github Preview](http://github-preview.herokuapp.com/)
+[GitHub Preview](http://github-preview.herokuapp.com/)
 
-     [Github Preview](http://github-preview.herokuapp.com/)
+     [GitHub Preview](http://github-preview.herokuapp.com/)
 

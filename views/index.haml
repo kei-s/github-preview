@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title Github Preview
+    %title GitHub Preview
     %script{:type => "text/javascript", :src => "http://code.jquery.com/jquery-1.6.2.min.js"}
     %script{:type => "text/javascript", :src => "http://documentcloud.github.com/underscore/underscore-min.js"}
     %script{:type => "text/javascript", :src => "/scripts/app.js"}
@@ -11,7 +11,7 @@
       %img{:alt => "Fork me on GitHub", :src => "http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png", :style => "position: absolute; top: 0pt; right: 0pt; border: 0pt none;"}
 
     #header
-      %h1 Github Preview
+      %h1 GitHub Preview
       %p
         Format:
         - formats = %w[markdown textile rdoc org creole mediawiki]
@@ -21,7 +21,7 @@
         %a#showhelp{:href => "#"} Show Formatting Help
         :javascript
           function getText() {
-            GithubPreview.changedForm = false;
+            GitHubPreview.changedForm = false;
             return $('#text').val();
           }
         %object#clippy{classid: "clsid:d27cdb6e-ae6d-11cf-96b8-444553540000", width: "110", height: "14"}

@@ -39,10 +39,10 @@ bc. Use @code@ in line.
 
 h1. Link
 
-http://github-preview.herokuapp.com/ will be autolinked in Github.
+http://github-preview.herokuapp.com/ will be autolinked in GitHub.
 
-bc. http://github-preview.herokuapp.com/ will be autolinked in Github.
+bc. http://github-preview.herokuapp.com/ will be autolinked in GitHub.
 
-"Github Preview":http://github-preview.herokuapp.com/
+"GitHub Preview":http://github-preview.herokuapp.com/
 
-bc. "Github Preview":http://github-preview.herokuapp.com/
+bc. "GitHub Preview":http://github-preview.herokuapp.com/
