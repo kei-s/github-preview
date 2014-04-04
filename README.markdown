@@ -1,4 +1,4 @@
-# GitHub Preview [![TravisCI](https://secure.travis-ci.org/kei-s/github-preview.png?branch=master)](http://travis-ci.org/kei-s/github-preview) [![Dependency Status](https://gemnasium.com/kei-s/github-preview.png)](https://gemnasium.com/kei-s/github-preview)
+# GitHub Preview [![TravisCI](https://secure.travis-ci.org/kei-s/github-preview.png?branch=master)](http://travis-ci.org/kei-s/github-preview) [![Dependency Status](https://gemnasium.com/kei-s/github-preview.png)](https://gemnasium.com/kei-s/github-preview) [![PullReview stats](https://www.pullreview.com/github/kei-s/github-preview/badges/master.svg?)](https://www.pullreview.com/github/kei-s/github-preview/reviews/master)
 
 ## App on Heroku
 [http://github-preview.herokuapp.com/](http://github-preview.herokuapp.com/)
