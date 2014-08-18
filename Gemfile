@@ -14,7 +14,7 @@ gem 'thin' # better performance on heroku + long urls possible
 
 group :test do
   gem 'rake'
-  gem 'rspec'
+  gem 'rspec', group: 'production'
   gem 'capybara'
   gem 'selenium-webdriver'
 end
