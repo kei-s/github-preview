@@ -17,4 +17,5 @@ group :test do
   gem 'rspec', group: 'production'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem "codeclimate-test-reporter", require: nil
 end
