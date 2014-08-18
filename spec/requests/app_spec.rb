@@ -3,14 +3,14 @@ require_relative '../spec_helper.rb'
 describe Preview, js: true do
   it 'shows all elements' do
     visit('/')
-    page.should have_selector('#text')
-    page.should have_selector('#preview')
+    expect(page).to have_selector('#text')
+    expect(page).to have_selector('#preview')
   end
 
   it 'shows markdown preview' do
     visit('/')
     fill_in('text', with: '- hi')
-    find('#preview ul li').text.should == 'hi'
+    expect(find('#preview ul li').text).to eq('hi')
     leave
     accept_confirmation
   end
@@ -18,25 +18,25 @@ describe Preview, js: true do
   context 'with submitted text' do
     it 'shows submitted text' do
       visit('/?text=%23XXX')
-      find('#text').text.should == '#XXX'
+      expect(find('#text').text).to eq('#XXX')
     end
 
     it 'parses submitted text' do
       visit('/?text=%23XXX')
-      find('#preview h1').text.should == 'XXX'
+      expect(find('#preview h1').text).to eq('XXX')
     end
 
     it 'parses submitted text in submitted format' do
       visit('/?text=h1.%20XXX&format=textile')
-      find('#preview h1').text.should == 'XXX'
+      expect(find('#preview h1').text).to eq('XXX')
     end
   end
 
   context 'escape' do
     it 'should not show unexpected tag' do
       visit("/?text=#{URI.escape('</textarea></td><h1>hogehoge</h1>')}")
-      page.should_not have_selector(:xpath, '//body/h1[text()="hogehoge"]')
-      find('#preview h1').text.should == 'hogehoge'
+      expect(page).not_to have_selector(:xpath, '//body/h1[text()="hogehoge"]')
+      expect(find('#preview h1').text).to eq('hogehoge')
     end
   end
 
@@ -46,7 +46,7 @@ describe Preview, js: true do
         visit('/')
         select(format, from: 'format')
         fill_in('text', with: text)
-        find('#preview ul li').text.should == 'hi'
+        expect(find('#preview ul li').text).to eq('hi')
         leave
         accept_confirmation
       end
@@ -85,7 +85,7 @@ describe Preview, js: true do
 
     it 'should show when leaving' do
       leave
-      page.driver.browser.switch_to.alert.text.should_not be_nil
+      expect(page.driver.browser.switch_to.alert.text).not_to be_nil
       accept_confirmation
       correct_leaving_destination?
     end
@@ -103,7 +103,7 @@ describe Preview, js: true do
   end
 
   def correct_leaving_destination?
-    page.should have_selector('h1')
+    expect(page).to have_selector('h1')
   end
 
   def accept_confirmation
