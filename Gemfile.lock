@@ -29,7 +29,7 @@ GEM
     multi_json (1.10.1)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
-    org-ruby (0.9.8)
+    org-ruby (0.9.9)
       rubypants (~> 0.2)
     posix-spawn (0.3.9)
     rack (1.5.2)
