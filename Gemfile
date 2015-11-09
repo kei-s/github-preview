@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.2.3'
+ruby '2.1.2'
 
 gem 'sinatra'
 gem 'haml'
@@ -16,6 +16,6 @@ group :test do
   gem 'rake'
   gem 'rspec', group: 'production'
   gem 'capybara'
-  gem 'poltergeist'
+  gem 'selenium-webdriver'
   gem "codeclimate-test-reporter", require: nil
 end

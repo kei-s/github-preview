@@ -9,7 +9,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    cliver (0.3.2)
+    childprocess (0.5.7)
+      ffi (~> 1.0, >= 1.0.11)
     codeclimate-test-reporter (0.4.8)
       simplecov (>= 0.7.1, < 1.0.0)
     creole (0.5.0)
@@ -18,6 +19,7 @@ GEM
     docile (1.1.5)
     eventmachine (1.0.8)
     expression_parser (0.9.0)
+    ffi (1.9.10)
     github-markup (1.4.0)
     haml (4.0.7)
       tilt
@@ -30,11 +32,6 @@ GEM
       mini_portile (~> 0.6.0)
     org-ruby (0.9.12)
       rubypants (~> 0.2)
-    poltergeist (1.7.0)
-      capybara (~> 2.1)
-      cliver (~> 0.3.1)
-      multi_json (~> 1.0)
-      websocket-driver (>= 0.2.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -57,6 +54,12 @@ GEM
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
     rubypants (0.2.0)
+    rubyzip (1.1.7)
+    selenium-webdriver (2.48.1)
+      childprocess (~> 0.5)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
     simplecov (0.10.0)
       docile (~> 1.1.0)
       json (~> 1.8)
@@ -76,9 +79,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
-    websocket-driver (0.6.3)
-      websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.2)
+    websocket (1.2.2)
     wikicloth (0.8.3)
       builder
       expression_parser
@@ -99,14 +100,11 @@ DEPENDENCIES
   github-markup
   haml
   org-ruby
-  poltergeist
   rake
   rdoc (= 3.6.1)
   redcarpet
   rspec
+  selenium-webdriver
   sinatra
   thin
   wikicloth
-
-BUNDLED WITH
-   1.10.6
