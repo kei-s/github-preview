@@ -12,7 +12,6 @@ describe Preview, js: true do
     fill_in('text', with: '- hi')
     expect(find('#preview ul li').text).to eq('hi')
     leave
-    accept_confirmation
   end
 
   context 'with submitted text' do
@@ -48,7 +47,6 @@ describe Preview, js: true do
         fill_in('text', with: text)
         expect(find('#preview ul li').text).to eq('hi')
         leave
-        accept_confirmation
       end
     end
 
@@ -85,8 +83,7 @@ describe Preview, js: true do
 
     it 'should show when leaving' do
       leave
-      expect(page.driver.browser.switch_to.alert.text).not_to be_nil
-      accept_confirmation
+      expect(page.driver.browser.modal_message).not_to be_nil
       correct_leaving_destination?
     end
 
@@ -104,10 +101,6 @@ describe Preview, js: true do
 
   def correct_leaving_destination?
     expect(page).to have_selector('h1')
-  end
-
-  def accept_confirmation
-    page.driver.browser.switch_to.alert.accept
   end
 
   def click_clippy
