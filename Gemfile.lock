@@ -72,7 +72,7 @@ GEM
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
       rack (~> 1.0)
-    tilt (2.0.1)
+    tilt (2.0.2)
     twitter-text (1.13.0)
       unf (~> 0.1.0)
     unf (0.1.4)
