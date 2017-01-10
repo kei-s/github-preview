@@ -106,6 +106,7 @@ DEPENDENCIES
   rdoc (= 3.6.1)
   redcarpet
   rspec
+  simplecov
   sinatra
   thin
   wikicloth
