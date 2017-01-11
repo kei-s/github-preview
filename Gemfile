@@ -18,5 +18,5 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
   gem "simplecov"
-  gem "codeclimate-test-reporter", require: nil
+  gem "codeclimate-test-reporter"
 end
