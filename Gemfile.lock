@@ -44,7 +44,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rake (12.0.0)
+    rake (12.3.3)
     rdoc (3.6.1)
     redcarpet (3.4.0)
     rspec (3.5.0)
